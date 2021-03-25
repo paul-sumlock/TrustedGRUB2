@@ -183,7 +183,7 @@ struct grub_btrfs_inode
   grub_uint64_t size;
   grub_uint8_t dummy2[0x70];
   struct grub_btrfs_time mtime;
-} GRUB_PACKED;
+} __attribute__ ((aligned (4)));
 
 struct grub_btrfs_extent_data
 {
